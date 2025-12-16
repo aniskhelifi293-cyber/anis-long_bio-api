@@ -1,4 +1,3 @@
-
 from flask import Flask, request, jsonify
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad
@@ -33,7 +32,7 @@ def get_bio_server_url(lock_region: str):
     """Region ke hisaab se Free Fire bio endpoint select kare"""
     region = lock_region.upper()
     if region == "ME":
-        return "https://clientbp.common.ggbluefox.com/UpdateSocialBasicInfo"
+        return "https://clientbp.ggblueshark.com/UpdateSocialBasicInfo"
     elif region in {"BR", "US", "SAC", "NA"}:
         return "https://client.us.freefiremobile.com/UpdateSocialBasicInfo"
     elif region == "BD":

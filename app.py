@@ -42,6 +42,9 @@ def get_bio_server_url(lock_region: str):
     else:
         return "https://clientbp.ggblueshark.com/UpdateSocialBasicInfo"
 
+@app.route('/ping')
+def ping():
+    return jsonify({"status": "alive"}), 200
 @app.route('/set-bio', methods=['GET'])
 def set_bio():
     jwt_token = request.args.get('token')
